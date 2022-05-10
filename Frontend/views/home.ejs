@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Meta -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- Bulma -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/7a587eb764.js" crossorigin="anonymous"></script>
+        
+        <!-- Vue.js -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    
+        <!-- Axios -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <title> <%= title %> </title>
+    
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100;200;300;400;500;600;700;800;900&display=swap');
+            * {
+                font-family: "Kanit";
+            }
+        </style>
+    </head>
+
+<nav class="navbar">
+    <div class="navbar-brand">
+        <a href="/" class="navbar-item">
+            <img src="https://www.kmids.ac.th/wp-content/uploads/2021/04/Sub-Logo-KMITL_KMITL-%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%88%E0%B8%AD%E0%B8%A1%E0%B9%80%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B1%E0%B8%87.png">
+        </a>
+    </div>
+</nav>
+
+<body style="background-color: #8fbb73; color: white">
+    <div id="app">
+        <div class="columns is-multiline">
+            <div class="column is-8 is-offset-2 mt-5">
+                <p class="is-size-4 has-text-weight-bold">
+                    ระบบรับสมัครนักศึกษาระดับปริญญาเอก<br>
+                    <span style="color: orange;">
+                        สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+                    </span>
+                   
+                </p>
+                <label>
+                    ค้นหา 'คณะ'
+                    <input class="input">
+                </label>
+                <label>
+                    ค้นหา 'รอบรับสมัคร'
+                    <input class="input">
+                </label>
+                <label>
+                    ค้นหา 'โครงการ'
+                    <input class="input">
+                </label>
+                <label>
+                    ค้นหาหลักสูตร ไทย / นานาชาติ
+                    <input class="input">
+                </label>
+                <label>
+                    คำค้นหาเพิ่มเติม (Enter เพื่อแยกคำ) [ระบบจะค้นจากชื่อคณะ,หลักสูตร]
+                    <input class="input">
+                </label>
+            </div>
+            <div class="column is-8 is-offset-2" style="color: black;">
+                ผลการค้นหา : 135 รายการ
+            </div>
+            <div class="column is-8 is-offset-2 is-size-2">
+                กทม.<br>
+
+            <p class="has-text-danger is-size-6">
+                หมายเหตุกรณีเปลี่ยนสาขาวิชาที่สมัครหรืออันดับหรือโครงการที่สมัคร ต้องสมัครใหม่ และชำระเงินค่าสมัครใหม่เท่านั้น โดยสถาบันฯ <br>
+                จะถือว่าการสมัครครั้งสุดท้ายที่มีการชําระเงินค่าสมัครเรียบร้อยแล้วเป็นครั้งที่ต้องการเข้าสอบ และครั้งที่สมัครก่อนหน้าจะถือเป็นโมฆะ แม้ว่าจะชําระเงินค่าสมัครแล้วก็ตาม
+            </p>
+            </div>
+
+
+            
+            <div class="column is-8 is-offset-2 mb-5">
+                <div class="card p-3">
+                    <p>หลักสูตร : การออกแบบสภาพแวดล้อมแผนการศึกษา : แบบที่ 1.1 | ช่วงเวลาเรียน : ปกติ | เฉพาะ :</p>
+                    <p>
+                        <span class="button is-rounded is-size-7" style="color: orange">1 / 2565</span>
+                        <span class="button is-rounded is-size-7" style="color: red">รอบ 1 - รับสมัครประจำภาคการศึกษา</span>
+                        <span class="button is-rounded is-size-7" style="color: purple">โครงการ รับเข้า 1/2565 คณะสถาปัตยกรรม ศิลปะและการออกแบบ</span>
+                    </p>
+                    <p>
+                        <span style="color: red">
+                            คณะ สถาปัตยกรรม ศิลปะและการออกแบบ<br>
+                        </span>
+                        หลักสูตร : การออกแบบสภาพแวดล้อม / Environmental Design<br>
+                        วันที่เปิดรับสมัคร : 24 กุมภาพันธ์ 2022 - 31 พฤษภาคม 2022
+                    </p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+
+<footer style="background-color: grey;" class="v-footer v-sheet theme--dark p-5" data-booted="true">
+    <div class="container">
+        <div class="row">
+            <div class="col-2 d-none d-lg-flex col"></div>
+            <div class="ml-5 mr-5 col">
+                <h3>
+                    <span class="orange--text text--darken-4">
+                        ติดต่อ : ระดับปริญญาตรี
+                    </span>
+                </h3>
+                <hr role="separator" aria-orientation="horizontal" color="#757575" class="v-divider theme--dark">
+                <i aria-hidden="true" class="v-icon notranslate mdi mdi-phone theme--dark"></i> 
+                : 0 2329 8203<br>
+                <i aria-hidden="true" class="v-icon notranslate mdi mdi-at theme--dark"></i>
+                : admission-reg@kmitl.ac.th<br>
+                <i aria-hidden="true" class="v-icon notranslate mdi mdi-facebook theme--dark"></i>
+                : 
+                <a href="https://www.facebook.com/Admission.KMITL" target="blank" style="text-decoration: none; color: white;">
+                    admission.kmitl
+                </a><br> 
+                Fax : 02-329-8204 
+            </div>
+            <div class="ml-5 mr-5 col">
+                <h3>
+                    <span class="orange--text text--darken-4">
+                        ติดต่อ : ระดับบัณฑิตศึกษา
+                    </span>
+                </h3>
+                <hr role="separator" aria-orientation="horizontal" color="#757575" class="v-divider theme--dark">
+                <i aria-hidden="true" class="v-icon notranslate mdi mdi-phone theme--dark"></i> 
+                : 0 2329 8206<br>
+                <i aria-hidden="true" class="v-icon notranslate mdi mdi-at theme--dark"></i> 
+                : grad-reg@kmitl.ac.th<br>
+                <i aria-hidden="true" class="v-icon notranslate mdi mdi-facebook theme--dark"></i> 
+                : 
+                <a href="https://www.facebook.com/reg.kmitl" target="blank" style="text-decoration: none; color: white;">
+                    reg.kmitl
+                </a><br>
+                 Fax : 02-329-8204 
+                </div>
+                <div class="ml-5 mr-5 col">
+                    <h3>
+                        <span class="orange--text text--darken-4">
+                            สำนักทะเบียนและประมวลผล 
+                        </span>
+                    </h3>
+                    <hr role="separator" aria-orientation="horizontal" color="#757575" class="v-divider theme--dark"> 
+                    สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง<br>
+                     เลขที่ 1 ซอยฉลองกรุง 1<br> แขวงลาดกระบัง เขตลาดกระบัง<br> 
+                     กรุงเทพ 10520 </div></div><div class="row">
+                         <div colspan="4" class="col"></div></div>
+                         <div class="row"><div class="col-2 d-none d-lg-flex col"></div>
+                         <div colspan="3" class="ml-5 mr-5 col"><h3>
+                             <span class="orange--text text--darken-4">King Mongkut's Institute of Technology Ladkrabang</span> 2021 All Rights Reserved. 
+        </h3></div></div>
+    </div>
+</footer>
+
+</html>
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            course: JSON.parse(`<%- data %>`),
+        },
+    });
+</script>
